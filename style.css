@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 20px 0;
+}
+
+.panel {
+  flex: 0.5;
+  height: 80vh;
+  margin: 10px;
+  border-radius: 20px;
+  position: relative;
+  transition: flex 0.3s ease-in;
+  cursor: pointer;
+}
+
+.active {
+  flex: 5;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: sans-serif;
+  color: white;
+  opacity: 0;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
